@@ -5,7 +5,7 @@ const port = process.env.PORT || 5000;
 
 app.use(cors(
   {
-    origin: ["https://simple-news-client.vercel.app"],
+    origin: "*", // Allow requests from all domains
     methods: ["POST", "GET"],
     credentials: true
   }
