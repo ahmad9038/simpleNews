@@ -3,13 +3,14 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors(
-  {
-    origin: ["https://simple-news-server.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-  }
-));
+// app.use(cors(
+//   {
+//     origin: ["https://simple-news-server.vercel.app"],
+//     methods: ["POST", "GET"],
+//     credentials: true
+//   }
+// ));
+app.use(cors());
 app.use(express.json());
 
 require("dotenv").config();
