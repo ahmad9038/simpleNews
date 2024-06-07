@@ -3,11 +3,14 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors({
-  origin: "https://simple-news-client.vercel.app",
-  methods: ["POST", "GET"],
-  credentials: true
-}));
+const corsOptions = {
+  origin: 'https://simple-news-client.vercel.app', // or your specific origin
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions));
 // app.use(cors());
 app.use(express.json());
 
