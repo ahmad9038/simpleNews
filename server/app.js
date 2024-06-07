@@ -4,10 +4,9 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: ["https://simple-news-client.vercel.app"],
+  origin: "https://simple-news-client.vercel.app",
   methods: ["POST", "GET"],
-  credentials: true,
-  headers: ['Content-Type', 'Authorization']
+  credentials: true
 }));
 // app.use(cors());
 app.use(express.json());
