@@ -10,8 +10,8 @@ const corsOptions = {
   optionsSuccessStatus: 204
 };
 
-app.options('*', cors());
-// app.use(cors());
+// app.options('*', cors());
+app.use(cors());
 app.use(express.json());
 
 require("dotenv").config();
