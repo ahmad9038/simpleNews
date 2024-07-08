@@ -3,12 +3,12 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5000;
 
-const corsOptions = {
-  origin: 'https://simple-news-client.vercel.app', // or your specific origin
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204
-};
+// const corsOptions = {
+//   origin: 'https://simple-news-client.vercel.app', // or your specific origin
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true,
+//   optionsSuccessStatus: 204
+// };
 
 // app.options('*', cors());
 app.use(cors());
